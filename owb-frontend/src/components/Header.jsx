@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpeg';
-
+import Navbar from '../components/Navbar';
 const Header = () => {
   return (
     <header className="bg-beige text-brown p-4 shadow-md">
@@ -12,6 +12,7 @@ const Header = () => {
         </Link>
         
       </nav>
+      <NavBar/>
     </header>
   );
 };
