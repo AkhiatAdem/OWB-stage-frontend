@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{html,js,jsx}"],
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}", // Assure-toi que cela inclut tous tes fichiers
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        beige: '#CFB290', // Couleur beige
+        brown: '#593E2B', // Couleur marron clair
+        'brown-dark': '#4E2B1F', // Couleur marron foncé pour le survol
+      },
+    },
   },
   plugins: [],
-}
-
+};
