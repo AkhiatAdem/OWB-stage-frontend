@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainPage from './pages/MainPage'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import Footer from './components/Footer'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/register' element={<RegisterPage/>}/>
       </Routes>
+      <Footer/>
     </Router>
     <App />
   </StrictMode>,
