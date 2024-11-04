@@ -10,34 +10,34 @@ export default function Navbar() {
 
     return <header className="flex flex-row relative h-[110px] w-[100vw] bg-[#CFB290] shadow-md border-b-2">
         <div className="flex md:flex-row flex-col justify-center w-[100vw] md:w-[33vw] items-center">
-            <img src="logo.PNG" className="md:w-[150px] w-[100px] pb-3"/>
-            <Link to='/'>  <h1 className="md:text-[1.7rem] text-[1.2rem]  font-bold tracking-widest  text-[#593E2B]">
+            <img src="logo.PNG" className="xl:w-[150px] w-[100px] pb-3"/>
+            <Link to='/'>  <h1 className=" xl:text-[1.7rem] md:text-[1.3rem] text-[1.2rem]  font-bold tracking-widest  text-[#593E2B]">
                testName
             </h1></Link>
 
         </div>
         <div className="hidden md:flex md:flex-row w-[33vw] justify-evenly items-center ">
-                <h1 className="text-[1.1rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
+                <h1 className=" xl:text-[1.1rem] text-[0.8rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
                     Men
                     <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]"></hr>
                 </h1>
-                <h1 className="text-[1.1rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
+                <h1 className="xl:text-[1.1rem] text-[0.8rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
                     women
                     <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]"></hr>
                 </h1>
-                <h1 className="text-[1.1rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
+                <h1 className="xl:text-[1.1rem] text-[0.8rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
                     Kids
                     <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]"></hr>
                 </h1>
-                <h1 className="text-[1.1rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
+                <h1 className="xl:text-[1.1rem] text-[0.8rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
                     Best offers
                     <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]"></hr>
                 </h1>
                 
         </div>
         <div className="hidden md:flex md:flex-row w-[33vw] justify-center items-center">
-               <RegisterButton content="Sign Up"/>
-                <button className="w-[22%] border border-[#593E2B] px-4 py-3 text-[1rem] tracking-wide text-[#593E2B] font-semibold uppercase rounded-lg hover:bg-[#957f67] transition-all duration-200 cursor-pointer mx-4"><Link to='/login'>Login</Link></button>
+               <RegisterButton content="Sign Up" className=" xl:text-[1rem] text-[0.79rem]"/>
+                <button className="min-w-[%22] w-auto border border-[#593E2B] px-4 py-3 xl:text-[1rem] text-[0.8rem] tracking-wide text-[#593E2B] font-semibold uppercase rounded-lg hover:bg-[#957f67] transition-all duration-200 cursor-pointer mx-4"><Link to='/login'>Login</Link></button>
         </div>
         <div className="absolute top-7 cursor-pointer hover:opacity-70 right-4 md:hidden z-30" onClick={()=>{setMenuOpen(!ismenuOpen)}}>
                 <img src={ismenuOpen ? "icons/close.png" : 'icons/menu.png'} className="w-10" alt="" />
