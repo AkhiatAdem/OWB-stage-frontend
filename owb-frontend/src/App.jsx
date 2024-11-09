@@ -5,6 +5,11 @@ import Footer from './components/Footer';
 import  MainPage from './pages/MainPage';
 import Login from './pages/LoginPage';
 import Register from './pages/RegisterPage';
+import Men from './pages/Men';
+import Women from './pages/women';
+import Kids from './pages/Kids';
+import Offers from './pages/Offers';
+import ProductDetails from './pages/ProductDetails';
 
 const App = () => {
   return (
@@ -14,6 +19,11 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/men" element={<Men />}/>
+        <Route path="/women" element={<Women />}/>
+        <Route path="/kids" element={<Kids />}/>
+        <Route path="/offers" element={<Offers />}/>
+        <Route path="/ProductDetails" element={<ProductDetails />}/>
       </Routes>
       <Footer />
     </Router>

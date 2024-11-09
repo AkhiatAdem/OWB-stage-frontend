@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import RegisterButton from "./RegisterButton";
+import RegisterButton from "./Boutton";
 
 export default function Navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Navbar() {
                 <img src="logo.PNG" className="md:w-[150px] w-[100px] pb-3" alt="Logo" />
                 <Link to="/">
                     <h1 className="md:text-[1.7rem] text-[1.2rem] font-bold tracking-widest text-[#593E2B]">
-                        testName
+                        OWB 
                     </h1>
                 </Link>
             </div>
