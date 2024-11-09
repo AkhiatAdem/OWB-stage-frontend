@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex md:flex-row flex-col justify-center w-[100vw] md:w-[33vw] items-center">
             <img src="logo.PNG" className="xl:w-[150px] w-[100px] pb-3"/>
             <Link to='/'>  <h1 className=" xl:text-[1.7rem] md:text-[1.3rem] text-[1.2rem]  font-bold tracking-widest  text-[#593E2B]">
-               testName
+               OWB
             </h1></Link>
 
         </div>
