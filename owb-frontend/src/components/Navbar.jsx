@@ -30,10 +30,7 @@ export default function Navbar() {
                     Enfant
                     <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]" />
                 </Link>
-                <Link to="/offers" className="text-[1.1rem] tracking-wide text-[#593E2B] font-semibold uppercase group cursor-pointer hover:opacity-70">
-                    Meilleurs Offres
-                    <hr className="w-0 transition-all duration-300 ease-in-out group-hover:w-full border-t-2 border-[#593E2B]" />
-                </Link>
+                
             </nav>
 
             <div className="hidden md:flex md:flex-row w-full md:w-[33vw] justify-center items-center space-x-4">

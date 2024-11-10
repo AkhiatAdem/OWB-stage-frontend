@@ -8,7 +8,7 @@ const DataProvider = ({ children }) => {
     {
       id: 1,
       title: "Hello, World!",
-      description: "blaaaa blaaaaa blaaaa blaaaa",
+      description: "blaaaa blaaaaa blaaaa blaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaablaaaa",
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 123,
       discount: 0,
@@ -23,7 +23,7 @@ const DataProvider = ({ children }) => {
       price: 59.99,
       discount: 20,
       stock: 0,
-      type: "femme"  // Assuming this is for women
+      type: "homme"  // Assuming this is for women
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const DataProvider = ({ children }) => {
       price: 24.99,
       discount: 15,
       stock: 0,
-      type: "femme"  // Assuming this is for women
+      type: "homme"  // Assuming this is for women
     },
     {
       id: 5,
