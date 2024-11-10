@@ -1,20 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.jpeg';
-import Navbar from '../components/Navbar';
-
+import cartIcon from '../assets/cartIcon.png';
 const Header = () => {
-  return (
-    <header className="bg-beige text-brown p-4 shadow-md">
-      <nav className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="Logo de la Boutique" className="h-10 mr-2" />
-          <span className="text-2xl font-bold">Boutique</span>
-        </Link>
-      </nav>
-      <Navbar />
-    </header>
-  );
+    return (
+        <header className="flex justify-between items-center p-4 bg-[#593E2B] text-white">
+          <img src="logo.PNG" className="md:w-[150px] w-[100px] pb-3" alt="Logo" />
+            <div className="text-2xl font-bold">
+                <Link to="/">OWB</Link>
+            </div>
+            <nav className="space-x-4">
+                <Link to="/men" className="hover:text-[#CFB290]"> Hommes</Link>
+                <Link to="/women" className="hover:text-[#CFB290]"> Femmes</Link>
+                <Link to="/children" className="hover:text-[#CFB290]">Enfants</Link>
+                <Link to="/offers" className="hover:text-[#CFB290]">Meilleures Offres</Link>
+            </nav>
+            <div className='flex items-center'>
+                <Link to="/cart" className="hover:text-[#CFB290]">
+                    <img src={cartIcon} alt="Panier" className="h-8" />
+                </Link>
+            </div>
+        </header>
+    );
 };
 
 export default Header;
