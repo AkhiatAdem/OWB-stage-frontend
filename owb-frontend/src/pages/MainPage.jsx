@@ -1,38 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import Navbar from '../components/Navbar';
+=======
+import FloatingDesign from '../components/FloatingDesign';
+import RegisterButton from '../components/RegisterButton';
+export default function MainPage(){
+  return <div>
+        <FloatingDesign/>
+>>>>>>> main
 
-const Home = () => {
-  return (
-    <div className="bg-gradient-to-r from-beige to-brown min-h-screen flex flex-col items-center">
-      <header className="text-center py-12">
-        <h1 className="text-5xl font-bold text-white">Bienvenue sur notre Boutique</h1>
-        <p className="mt-4 text-lg text-white">
-          Découvrez nos offres exceptionnelles et profitez d'une expérience d'achat inoubliable !
-        </p>
-        <div className="mt-6">
-          <Link to="/register" className="inline-block bg-white text-brown rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition mb-4">
-            Inscrivez-vous dès maintenant
-          </Link>
-          <Link to="/login" className="inline-block bg-transparent border-2 border-white text-white rounded-full px-6 py-3 hover:bg-white hover:text-brown transition">
-            Connexion
-          </Link>
-        </div>
-      </header>
-      
-      <main className="container mx-auto p-4">
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-brown mb-4">À propos de notre boutique</h2>
-          <p className="text-gray-700 max-w-xl mx-auto">
-            Nous nous engageons à offrir la meilleure qualité de produits et un service client exceptionnel. 
-            Explorez notre boutique pour découvrir des articles choisis avec soin pour répondre à vos besoins.
-          </p>
-        </section>
-      </main>
+        <div className="flex flex-col md:flex-row relative z-10">
+            <div className="flex flex-col w-full md:w-[55vw] h-[calc(100vh-115px)] xl:pl-[10%] pt-[5%] gap-5 pl-[10%] md:pl-[2%]">
+                <h1 className="xl:text-[4.2rem] md:text-[3.3rem] text-[2.8rem] font-bold text-[#593E2B] md:leading-normal leading-[70px]">THE BEST<br/> CLOTHING QUALITY<br/>IN ORAN</h1>
+                <p className="xl:text-[1.2rem] md:text-[1.1rem] font-light text-[#73553f] xl:w-[80%] w-[90%] md:leading-normal leading-[30px]">lementum ex. In mollis felis molestie, vulputate vehicula orci. Sed eu ornare tellus, sed ultrices ipsum. Mauris sollicitudin magna ut mauris pulvinar pellentesque et</p>
+                <RegisterButton className="w-[70%] ml-0" content="SIGN UP NOW"/>
+            </div>
+            <div className="hidden md:block aspect-square w-[45vw]  rounded-tl-full bg-[url('https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover  border-8 border-[#8d705c]">
 
+<<<<<<< HEAD
       <Navbar/>
+=======
+            </div>
+        </div>
+>>>>>>> main
     </div>
-  );
-};
-
-export default Home;
+}

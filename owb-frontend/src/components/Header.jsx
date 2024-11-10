@@ -4,6 +4,7 @@ import logo from '../assets/logo.jpeg';
 import Navbar from '../components/Navbar';
 const Header = () => {
   return (
+<<<<<<< HEAD
     <header className="bg-beige text-brown p-4 shadow-md">
       <nav className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
@@ -14,6 +15,9 @@ const Header = () => {
       </nav>
       <NavBar/>
     </header>
+=======
+    <></>
+>>>>>>> main
   );
 };
 
