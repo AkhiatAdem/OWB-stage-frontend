@@ -29,7 +29,7 @@ const Comp = ()=>{
   
    useEffect(() => {
    
-    if (location.pathname.toUpperCase().startsWith('/DASHBOARD') ) {
+    if (location.pathname.toUpperCase() == '/DASHBOARD' ) {
       navigate('/dashboard/menu', { replace: true });
     }
     if(location.pathname.toUpperCase().startsWith('/DASHBOARD') && localStorage.getItem('userType') != 'admin' || location.pathname.toUpperCase().startsWith('/EDIT') && localStorage.getItem('userType') != 'admin' || location.pathname.toUpperCase().startsWith('/ADD') && localStorage.getItem('userType') != 'admin'){
