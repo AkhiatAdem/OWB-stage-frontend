@@ -1,6 +1,4 @@
 
-
-
 import { useContext, useState } from "react";
 import DataContext from '../Datacontext'
 
@@ -39,11 +37,8 @@ export default function Stock(){
                 <td className="border-2 pl-3">
                     {d.stock}
                 </td>
-                <td className="border-2 pl-3">
-                    
+                <td className="border-2 pl-3">  
                     ADD TO STOCK
-                   
-
                 </td>
             </tr>
             }

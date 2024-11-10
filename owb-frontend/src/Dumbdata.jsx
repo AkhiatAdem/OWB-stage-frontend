@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+
 import DataContext from './Datacontext';
 
 
@@ -12,7 +12,8 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 123,
       discount: 0,
-      stock: 20  // Stock quantity
+      stock: 20,
+      type: "homme"  // Assuming this is for men
     },
     {
       id: 2,
@@ -21,7 +22,8 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 59.99,
       discount: 20,
-      stock: 0  // Out of stock
+      stock: 0,
+      type: "femme"  // Assuming this is for women
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 79.99,
       discount: 0,
-      stock: 10  // Stock quantity
+      stock: 10,
+      type: "homme"  // Assuming this is for men
     },
     {
       id: 4,
@@ -39,7 +42,8 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 24.99,
       discount: 15,
-      stock: 0  // Out of stock
+      stock: 0,
+      type: "femme"  // Assuming this is for women
     },
     {
       id: 5,
@@ -48,7 +52,8 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 99.99,
       discount: 0,
-      stock: 5  // Stock quantity
+      stock: 5,
+      type: "femme"  // This is clearly for women
     },
     {
       id: 6,
@@ -57,9 +62,11 @@ const DataProvider = ({ children }) => {
       img: "https://images.pexels.com/photos/20345031/pexels-photo-20345031/free-photo-of-alexanderplatz-in-berlin-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 79.99,
       discount: 25,
-      stock: 0  // Out of stock
+      stock: 0,
+      type: "homme"  // Assuming this is for men
     }
   ];
+  
   
 
   return (

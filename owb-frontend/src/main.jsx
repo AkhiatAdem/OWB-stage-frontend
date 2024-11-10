@@ -30,38 +30,31 @@ const Comp = ()=>{
 
    useEffect(() => {
    
-    if (location.pathname.startsWith('/dashboard') ) {
+    if (location.pathname.toUpperCase().startsWith('/DASHBOARD') ) {
       navigate('/dashboard/menu', { replace: true });
     }
      }, [location.pathname, navigate]);
       return <>
-      {location.pathname.startsWith('/dashboard') || location.pathname.startsWith('/edit') || location.pathname.startsWith('/add')? "" : <Navbar/>}
+      {location.pathname.toUpperCase().startsWith('/DASH') || location.pathname.toUpperCase().startsWith('/EDIT') || location.pathname.toUpperCase().startsWith('/ADD')? "" : <Navbar/>}
 
 
         <Routes>
           <Route path='/' element={<MainPage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
-          <Route path='/register' element={<RegisterPage/>}/>
+          <Route path='/register' element={<RegisterPage/>}/>  
+          <Route path='/Men' element={<Men/>}/>
+          <Route path='/Women' element={<Women/>}/>
+          <Route path='/kids' element={<Kids/>}/>
 
-            
           <Route path='/dashboard' element = {<Dashboard/>} >
             <Route path='/dashboard/menu' element={<ManageProducts/>}/>
-            
             <Route path='/dashboard/orders' element={<Orders/>}/>
             <Route path='/dashboard/stock' element={<Stock/>}/>
-
           </Route>
           <Route path='/edit/:id' element={<EditProduct/>} />
           <Route path='/add' element={<AddProduct/>} />
-          <Route path="/men" element={<Men />} />
-       <Route path="/women" element={<Women />} />
-       <Route path="/kids" element={<Kids />} />
-       <Route path="/offers" element={<Offers />} />
-       <Route path="/product-details" element={<ProductDetails />} />
-
-
         </Routes>
-        {location.pathname.startsWith('/dashboard') || location.pathname.startsWith('/edit') || location.pathname.startsWith('/add')? "" : <Footer/>}
+        {location.pathname.toUpperCase().startsWith('/DASH') || location.pathname.toUpperCase().startsWith('/EDIT') || location.pathname.toUpperCase().startsWith('/ADD')? "" : <Footer/>}
 
       
       </>
@@ -75,4 +68,4 @@ createRoot(document.getElementById('root')).render(
     </Router>
     </DataProvider>
   </StrictMode>,
-);
+)
