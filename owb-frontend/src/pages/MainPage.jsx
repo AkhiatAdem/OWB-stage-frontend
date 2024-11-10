@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+
 import FloatingDesign from '../components/FloatingDesign';
 import RegisterButton from '../components/RegisterButton';
 
@@ -8,7 +8,6 @@ export default function MainPage() {
   return (
     <div>
       <FloatingDesign />
-      <Navbar />
       <div className="flex flex-col md:flex-row relative z-10">
         <div className="flex flex-col w-full md:w-[55vw] h-[calc(100vh-115px)] xl:pl-[10%] pt-[5%] gap-5 pl-[10%] md:pl-[2%]">
           <h1 className="xl:text-[4.2rem] md:text-[3.3rem] text-[2.8rem] font-bold text-[#593E2B] md:leading-normal leading-[70px]">
