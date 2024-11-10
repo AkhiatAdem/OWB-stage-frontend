@@ -3,7 +3,7 @@ import Boutton from '../components/Boutton';
 
 const Sign = () => {
   const [firstName, setFirstName] = useState('');
-  
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [city, setCity] = useState('');
