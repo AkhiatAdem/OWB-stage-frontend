@@ -1,14 +1,40 @@
 import React, { useState } from 'react';
 import Boutton from '../components/Boutton'; 
-
+import {  useNavigate } from 'react-router-dom';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
+  let users = [
+    {username:'adem',
+    password:'12',
+    type:'admin'},
+    {username:'random',
+    password:'12',
+    type:'user'}
+  ]
 
+  const handleLogin = () => {
+    
+    const user = users.find(user => user.username === username && user.password === password);
+    if(user){
+      localStorage.setItem('userType', user.type);
+      localStorage.setItem('userName', user.username);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log({ username, password});
+      if(user.type == 'admin'){
+        navigate('/dashboard' ,{replace:true});
+      }else{
+        navigate('/' ,{replace:true});
+
+      }
+
+    }else{
+      setPassword('');
+      setUsername('');
+      alert('wrong pass or username');
+    }
+    location.reload();
+    console.log(localStorage.getItem('userType'));
   };
 
   return (
@@ -38,7 +64,7 @@ const Login = () => {
           </div>
           
           <div className="flex justify-center">
-          <Boutton type="submit">Se connecter</Boutton>
+          <Boutton  onClick={()=>handleLogin()}>Se connecter</Boutton>
           </div>
         </form>
       </div>

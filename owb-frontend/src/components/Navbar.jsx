@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RegisterButton from "./Boutton";
 import Boutton from "./Boutton";
 
 export default function Navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
-
+    let [user,setUser] = useState(false);
+useEffect(()=>{
+    const userName = localStorage.getItem('userName');
+    setUser(userName);
+    console.log(userName);
+},[])
+    
     return (
         <header className="flex flex-row relative h-[110px] w-full bg-[#CFB290] shadow-md border-b-2">
             <div className="flex md:flex-row flex-col justify-center w-full md:w-[33vw] items-center">
@@ -33,7 +39,7 @@ export default function Navbar() {
                 
             </nav>
 
-            <div className="hidden md:flex md:flex-row w-full md:w-[33vw] justify-center items-center space-x-4">
+            <div className={`hidden md:flex md:flex-row w-full md:w-[33vw] justify-center items-center space-x-4 ${user ? 'md:hidden' : ''}`}>
     <Link to="/register">
         <button className="flex items-center justify-center min-w-[120px] border border-[#593E2B] bg-[#593E2B] px-4 py-2 text-[1rem] tracking-wide text-[#CFB290] font-semibold uppercase rounded-lg hover:bg-[#957f67] transition-all duration-200 cursor-pointer">
             Inscription
@@ -44,6 +50,19 @@ export default function Navbar() {
             Connexion
         </button>
     </Link>
+</div>
+<div className={`hidden md:flex md:flex-row w-full md:w-[33vw] justify-center items-center space-x-4  ${user ? 'block' : 'md:hidden'}`}>
+
+        <button className={`flex items-center justify-center min-w-[120px] border border-[#593E2B] bg-[#593E2B] px-4 py-2 text-[1rem] tracking-wide text-[#CFB290] font-semibold uppercase rounded-lg hover:bg-[#957f67] transition-all duration-200 cursor-pointer`}
+        onClick={()=>{
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userType');
+            setUser(localStorage.removeItem('userName'));
+
+        }}
+        >
+            LOG OUT
+        </button>
 </div>
             <div 
                 className="absolute top-7 cursor-pointer hover:opacity-70 right-4 md:hidden z-30" 
