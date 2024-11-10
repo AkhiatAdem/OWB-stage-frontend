@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+
 import Tshirt from '../assets/Tshirt.webp'
 import jeans from '../assets/jeans.jpg'
 import veste from '../assets/veste.jpg'
@@ -43,7 +43,7 @@ const products = [
 const Men = () => {
     return (
         <div>
-            <Header />
+           
             <div className="p-4">
                 <h1 className="text-2xl font-bold">Vêtements pour Hommes</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
