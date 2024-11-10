@@ -17,7 +17,11 @@ import EditProduct from './pages/EditProduct'
 import AddProduct from './pages/AddProduct'
 import Orders from './pages/Orders'
 import Stock from './pages/Stock'
-
+import Men from './pages/Men';
+import Women from './pages/women';
+import Kids from './pages/Kids';
+import Offers from './pages/Offers';
+import ProductDetails from './pages/ProductDetails';
 const Comp = ()=>{
   const data = useContext(DataContext);
   console.log(data);
@@ -26,7 +30,7 @@ const Comp = ()=>{
 
    useEffect(() => {
    
-    if (location.pathname.startsWith('/Dashboard') ) {
+    if (location.pathname.startsWith('/dashboard') ) {
       navigate('/dashboard/menu', { replace: true });
     }
      }, [location.pathname, navigate]);
@@ -46,15 +50,19 @@ const Comp = ()=>{
             <Route path='/dashboard/orders' element={<Orders/>}/>
             <Route path='/dashboard/stock' element={<Stock/>}/>
 
-
-          
           </Route>
           <Route path='/edit/:id' element={<EditProduct/>} />
           <Route path='/add' element={<AddProduct/>} />
+          <Route path="/men" element={<Men />} />
+       <Route path="/women" element={<Women />} />
+       <Route path="/kids" element={<Kids />} />
+       <Route path="/offers" element={<Offers />} />
+       <Route path="/product-details" element={<ProductDetails />} />
 
 
         </Routes>
-        <Footer/>
+        {location.pathname.startsWith('/dashboard') || location.pathname.startsWith('/edit') || location.pathname.startsWith('/add')? "" : <Footer/>}
+
       
       </>
 }
@@ -67,4 +75,4 @@ createRoot(document.getElementById('root')).render(
     </Router>
     </DataProvider>
   </StrictMode>,
-)
+);
